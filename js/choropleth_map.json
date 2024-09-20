@@ -24,33 +24,26 @@
               "url": "https://raw.githubusercontent.com/Vortwx/Homework-W9/main/data/2023%20Malaysia%20Domestic%20Tourism.csv"
             },
             "key": "States",
-            "fields": ["Total_visitor_percentage", "Visitors"]
+            "fields": ["total_visitor_per_10k_pop", "Visitors"]
           }
         }
       ],
       "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
       "encoding": {
         "color": {
-          "field": "Total_visitor_percentage",
+          "field": "total_visitor_per_10k_pop",
+          "title": "visitors per 10000 population",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [2, 4, 6, 8, 10, 12],
-            "range": [
-              "#feedde",
-              "#fdd0a2",
-              "#fdae6b",
-              "#fd8d3c",
-              "#f16913",
-              "#d94801",
-              "#8c2d04"
-            ]
+            "domain": [0.5, 1, 1.5, 2],
+            "range": ["#feebe2", "#fbb4b9", "#f768a1", "#c51b8a", "#7a0177"]
           }
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "State"},
           {
-            "field": "Total_visitor_percentage",
+            "field": "total_visitor_per_10k_pop",
             "type": "quantitative",
             "title": "Domestic Visitors Percentage (%)",
             "format": ".2f"
