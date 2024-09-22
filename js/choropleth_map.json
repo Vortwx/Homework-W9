@@ -3,7 +3,7 @@
   "width": 800,
   "height": 450,
   "title": {
-    "text": "Percentage of domestic tourists in each states of Malaysia 2023",
+    "text": "Density of domestic tourists (per 10000 population) in each states of Malaysia 2023",
     "fontSize": 20
   },
   "projection": {"type": "mercator", "scale": 2000, "translate": [-3400, 300]},
@@ -45,7 +45,7 @@
           {
             "field": "total_visitor_per_10k_pop",
             "type": "quantitative",
-            "title": "Domestic Visitors Percentage (%)",
+            "title": "Domestic Visitors Density (per 10000 population)",
             "format": ".2f"
           },
           {"field": "Visitors", "type": "quantitative"}
