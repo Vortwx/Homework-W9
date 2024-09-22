@@ -3,7 +3,7 @@
   "width": 800,
   "height": 450,
   "title": {
-    "text": "Density of domestic tourists (per 1000000 population) in each states of Malaysia 2023",
+    "text": "Density of domestic tourists (per 1000 population) in each states of Malaysia 2023",
     "fontSize": 20
   },
   "projection": {"type": "mercator", "scale": 2000, "translate": [-3400, 300]},
@@ -24,28 +24,28 @@
               "url": "https://raw.githubusercontent.com/Vortwx/Homework-W9/main/data/2023%20Malaysia%20Domestic%20Tourism.csv"
             },
             "key": "States",
-            "fields": ["total_visitor_per_10k_pop", "Visitors"]
+            "fields": ["total_visitor_per_1k_pop", "Visitors"]
           }
         }
       ],
       "mark": {"type": "geoshape", "stroke": "black", "strokeWidth": 0.5},
       "encoding": {
         "color": {
-          "field": "total_visitor_per_10k_pop",
-          "title": "visitors per 1000000 population",
+          "field": "total_visitor_per_1k_pop",
+          "title": "visitors per 1000 population",
           "type": "quantitative",
           "scale": {
             "type": "threshold",
-            "domain": [0.5, 1, 1.5, 2],
-            "range": ["#feebe2", "#fbb4b9", "#f768a1", "#c51b8a", "#7a0177"]
+            "domain": [25,50,75,100,125],
+            "range":["#ffffcc","#c7e9b4","#7fcdbb","#41b6c4","#2c7fb8","#253494"]
           }
         },
         "tooltip": [
           {"field": "properties.name", "type": "nominal", "title": "State"},
           {
-            "field": "total_visitor_per_10k_pop",
+            "field": "total_visitor_per_1k_pop",
             "type": "quantitative",
-            "title": "Domestic Visitors Density (per 10000 population)",
+            "title": "Domestic Visitors Density (per 1000 population)",
             "format": ".2f"
           },
           {"field": "Visitors", "type": "quantitative"}
